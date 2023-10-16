@@ -1,4 +1,42 @@
-const addFaculty = (name, desc) => {
+import { app } from './data.js';
+import { getFirestore, collection, doc, setDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js'
+
+const PROJECT_IN_CHARGE = "Prof. Ekram Khan";
+const PROJECT_MENTOR = "Mr. Faraz Ahmad";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB2O-hYm_kEZpdZFdMIhpSuMKKBRZ_i_rU",
+    authDomain: "ssamusat-dfc2c.firebaseapp.com",
+    projectId: "ssamusat-dfc2c",
+    storageBucket: "ssamusat-dfc2c.appspot.com",
+    messagingSenderId: "395159965984",
+    appId: "1:395159965984:web:e63fbcf5f8c5ae9fc88745"
+};
+
+console.log(app)
+const db = getFirestore(app);
+
+
+const faculty = document.querySelector('#collapseOne > * > *')
+faculty.innerHTML = "";
+
+const alumni = document.querySelector('#collapseTwo > * > *')
+alumni.innerHTML = "";
+
+const teams = document.querySelector('#collapseThree > * > *')
+Array.from(teams.children).forEach((child) => {
+    const ul = child.querySelector(".card > ul")
+    ul.innerHTML = "";
+});
+
+
+const expert = document.querySelector('#collapseFour > * > *')
+expert.innerHTML = "";
+
+const sponsor = document.querySelector('#collapseFive > * > *')
+sponsor.innerHTML = "";
+
+const addFaculty = (name, designation, dept) => {
     const faculty = document.querySelector('#collapseOne > * > *')
     const div = createCard()
     const card = div.children[0];
@@ -12,14 +50,23 @@ const addFaculty = (name, desc) => {
 
     const description = document.createElement('p')
     description.classList.add('card-text')
-    description.innerHTML = "Chairman<br>" + desc;
+    description.innerHTML = designation + "<br>";
+    if (dept) {
+        description.innerHTML += "Dept. of " + dept + " Engg., ZHCET";
+    } else {
+        description.innerHTML += "Zakir Husain College of Engg. & Technology";
+    }
+
+    if (name === PROJECT_IN_CHARGE) {
+        description.innerHTML += "<br><b>Project in-charge</b>"
+    }
 
     cardBody.append(title, description);
     card.appendChild(cardBody);
     faculty.appendChild(div);
 }
 
-const addAlumni = (name, desc) => {
+const addAlumni = (name, designation, institute) => {
     const alumni = document.querySelector('#collapseTwo > * > *')
     const cardDiv = createCard()
     const card = cardDiv.children[0];
@@ -33,7 +80,11 @@ const addAlumni = (name, desc) => {
 
     const description = document.createElement('p')
     description.classList.add('card-text')
-    description.innerHTML = "Chairman<br>" + desc;
+    description.innerHTML = name + "<br>" + designation + "<br>" + institute;
+
+    if (name === PROJECT_MENTOR) {
+        description.innerHTML += "<br>" + "<b>Project Mentor</b>"
+    }
 
     cardBody.append(title, description);
     card.appendChild(cardBody);
@@ -81,7 +132,7 @@ const addStudent = (name, team) => {
 
 const addExpert = (name) => {
     const expert = document.querySelector('#collapseFour > * > *')
-    console.log(expert)
+    // console.log(expert)
 
     const cardDiv = createCard();
     const card = cardDiv.children[0];
@@ -125,10 +176,66 @@ const createCard = () => {
     div.appendChild(card)
     return div;
 }
-console.log(createCard())
-addFaculty("Dr. Rafey Ahmad", "afhdoihasdofsdf");
-addAlumni("Dr. Rafey Ahmad", "afhdoihasdofsdf");
-addStudent("Mr. Rafey Ahmad", "ES")
-addExpert("asdasddas")
-addSponsor("Rafey Ahmad", "Deloitte aosifjoiasdf")
+
+const loadFaculty = async () => {
+    const querySnapshot = await getDocs(collection(db, "faculty"));
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        const data = doc.data();
+        console.log(data)
+        addFaculty(data.Name, data.Designation, data.Department)
+    });
+}
+
+const loadAlumni = async () => {
+    const querySnapshot = await getDocs(collection(db, "alumni"));
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        const data = doc.data();
+        console.log(data)
+        addAlumni(data.Name, data.Designation, data.Institution)
+    });
+}
+
+const loadStudents = async () => {
+    const querySnapshot = await getDocs(collection(db, "students"));
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        const data = doc.data();
+        console.log(data)
+        addStudent(data.Name, data.Team)
+    });
+}
+
+const loadExperts = async () => {
+    const querySnapshot = await getDocs(collection(db, "experts"));
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        const data = doc.data();
+        console.log(data)
+        addExpert(data.Name)
+    });
+}
+
+const loadSponsors = async () => {
+    const querySnapshot = await getDocs(collection(db, "sponsors"));
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        const data = doc.data();
+        console.log(data)
+        addSponsor(data.Name, data.Details);
+    });
+}
+loadAlumni()
+loadFaculty()
+loadStudents();
+loadExperts()
+loadSponsors()
+// console.log(createCard())
+// addFaculty("Dr. Rafey Ahmad", "afhdoihasdofsdf");
+// addAlumni("Dr. Rafey Ahmad", "afhdoihasdofsdf");
+// addStudent("Mr. Rafey Ahmad", "ES")
+// addExpert("asdasddas")
+// addSponsor("Rafey Ahmad", "Deloitte aosifjoiasdf")
 // addAlumni(card2);

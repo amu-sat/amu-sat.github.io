@@ -80,7 +80,7 @@ const addAlumni = (name, designation, institute) => {
 
     const description = document.createElement('p')
     description.classList.add('card-text')
-    description.innerHTML = name + "<br>" + designation + "<br>" + institute;
+    description.innerHTML = designation + "<br>" + institute;
 
     if (name === PROJECT_MENTOR) {
         description.innerHTML += "<br>" + "<b>Project Mentor</b>"

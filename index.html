@@ -68,6 +68,28 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
+    
+    ul{
+      display: flex;
+      justify-content: space-around;
+      margin: 32px;
+      font-family: var(--bs-body-font-family);
+      padding: 2px;
+    }
+    li{
+      font-size: 1.3rem;
+      font-family: sans-serif;
+      transition: 0.3s linear;
+
+    }
+    li:hover{
+     
+      transform: translatey(10%); 
+    }
+    ul li a:hover {
+      border-bottom: 3px solid black;
+      color: gray;
+    }
   </style>
 
 
@@ -82,7 +104,21 @@
       <div class="col-md">
         <h1 class="display-4"><b>SS AMU SAT</b></h1>
         <h5>A Students' Satellite Initiative</h5>
+       
       </div>
+      <div class="col-md">
+      <ul style="list-style: none;">
+        <li>
+          <p><a href="#about" style="text-decoration: none; color: black;">About</a></p>
+        </li>
+        <li>
+          <p><a href="#team" style="text-decoration: none; color: black;">Team</a></p>
+        </li>
+        <li>
+          <p><a href="#contact" style="text-decoration: none; color: black;">Contact</a></p>
+        </li>
+      </ul>
+    </div>
     </div>
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -142,7 +178,7 @@
 
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <div class="container marketing" id="about">
       <div class="container-fluid py-5" style="background-color: #ffffff;">
         <h1>About</h1>
         <blockquote class="blockquote">
@@ -202,7 +238,7 @@
         <div class="accordion" id="accordionExample">
 
           <!--Faculty Team-->
-          <div class="accordion-item">
+          <div class="accordion-item" id="team">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne">
@@ -883,7 +919,7 @@
           <h1 class="display-6" style="text-align: center;">
             We sincerely Thank You for your time and generousity!
           </h1><br>
-          <div class="row" align="center">
+          <div class="row" align="center" id="contact">
             <div class="col-md-4" style="text-align:center;"><a class="btn btn-primary btn-lg"
                 href="mailto:ekhan.el@amu.ac.in" role="button">Contact Project In-Charge</a></div>
             <div class="col-md-4" style="text-align:center;"><a class="btn btn-primary btn-lg"

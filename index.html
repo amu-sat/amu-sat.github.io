@@ -12,12 +12,18 @@
   <script type="module" src="js/data.js"></script>
   <script type="module" src="js/main.js" defer></script>
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+
   <script src="./js/jquery.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/jquery.min.js"></script>
 
   <style>
+    * {
+      color: white;
+      background-color: #090a05;
+    }
+
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -32,10 +38,21 @@
       }
     }
 
+    .cardexpert{
+      background-color: #090a05;
+      color:white;
+    }
+
+    .cardexpert2{
+      background-color: #090a05;
+      color:white;
+      font-size: medium;
+     
+    }
     .b-example-divider {
       height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
+      /* background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15); */
       border-width: 1px 0;
       box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
     }
@@ -68,27 +85,71 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
-    
-    ul{
+
+    ul {
       display: flex;
       justify-content: space-around;
       margin: 32px;
       font-family: var(--bs-body-font-family);
       padding: 2px;
     }
-    li{
+
+    a {
+      color: white;
+    }
+
+    li {
       font-size: 1.3rem;
       font-family: sans-serif;
       transition: 0.3s linear;
 
+
     }
-    li:hover{
-     
-      transform: translatey(10%); 
+
+    li:hover {
+
+      transform: translatey(10%);
     }
+
     ul li a:hover {
-      border-bottom: 3px solid black;
-      color: gray;
+      border-bottom: 3px solid white;
+      color: white;
+    }
+
+    .intro {
+
+      background: url('https://res.cloudinary.com/dolthd0mr/image/upload/v1700435307/earth-1756274_1280_alal6o.jpg');
+      height: 645px;
+      position: relative;
+
+
+    }
+
+    .introhead {
+      position: absolute;
+      top: 220px;
+      left: 95px;
+      width: 30%;
+      background-color: transparent;
+    }
+
+    .satellite {
+      position: absolute;
+      top: 165px;
+      right: 30px;
+      background-color: transparent;
+    }
+
+    #element {
+      position: absolute;
+      top: 275px;
+      left: 95px;
+      color: #f4abab;
+      background-color: transparent;
+    }
+
+    span {
+      background-color: transparent;
     }
   </style>
 
@@ -97,31 +158,41 @@
 
 <body>
   <main>
-    <div class="row fixed-top" style="position: sticky;padding: 10px; background-color: #ffffff;">
+    <div class="row fixed-top" style="position: sticky;padding: 10px; background-color: #090a05;">
       <div class="col-md-1" align="center" verticle-align="middle">
         <img src="./img/logo.jpeg" class="img-fluid" alt="..." style="height:100px; width:100px;">
       </div>
       <div class="col-md">
         <h1 class="display-4"><b>SS AMU SAT</b></h1>
         <h5>A Students' Satellite Initiative</h5>
-       
+
       </div>
       <div class="col-md">
-      <ul style="list-style: none;">
-        <li>
-          <p><a href="#about" style="text-decoration: none; color: black;">About</a></p>
-        </li>
-        <li>
-          <p><a href="#team" style="text-decoration: none; color: black;">Team</a></p>
-        </li>
-        <li>
-          <p><a href="#contact" style="text-decoration: none; color: black;">Contact</a></p>
-        </li>
-      </ul>
-    </div>
+        <ul style="list-style: none;">
+          <li>
+            <p><a href="#about" style="text-decoration: none; ;">About</a></p>
+          </li>
+          <li>
+            <p><a href="#team" style="text-decoration: none; ">Team</a></p>
+          </li>
+          <li>
+            <p><a href="#contact" style="text-decoration: none;">Contact</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="intro">
+
+
+
+    </div>
+    <div id="">
+      <h1 class="introhead">SS AMU SAT</h1>
+      <h5 style="color: gray;"><span id="element"></span></h5>
+      <img src="./img/animation-2-unscreen.gif" class="satellite"></img>
+    </div>
+    <!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
           aria-label="Slide 1"></button>
@@ -174,12 +245,12 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </div> -->
 
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing" id="about">
-      <div class="container-fluid py-5" style="background-color: #ffffff;">
+      <div class="container-fluid py-5" style="background-color: #090a05;">
         <h1>About</h1>
         <blockquote class="blockquote">
           <p style="text-align: justify;">The <b>SS AMU SAT</b> project is an initiative by the Students and Alumni of
@@ -232,13 +303,18 @@
           -->
 
       <hr class="featurette-divider">
+      <h1 style="text-align: center; margin-bottom: 8px; padding: 5px;">Faculty Team</h1>
 
-      <!-- Three columns of text below the carousel -->
+
+
+
+      <!--           
+      Three columns of text below the carousel -->
       <div class="row">
         <div class="accordion" id="accordionExample">
 
           <!--Faculty Team-->
-          <div class="accordion-item" id="team">
+          <div class="accordion-item" style="color: white; background-color: #090a05;" id="team">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne">
@@ -256,7 +332,7 @@
                         <p class="card-text">Principal<br>Zakir Husain College of Engg. & Technology</p>
                       </div>
                     </div>
-                  </div><!-- /.col-lg-4 -->
+                  </div> /.col-lg-4
 
                   <div class="col-lg-3">
                     <div class="card" style="width: 18rem;">
@@ -275,7 +351,7 @@
                         <p class="card-text">Professor<br>Dept. of Mechanical Engg., ZHCET</p>
                       </div>
                     </div>
-                  </div><!-- /.col-lg-4 -->
+                  </div>/.col-lg-4
 
                   <div class="col-lg-3">
                     <div class="card" style="width: 18rem;">
@@ -284,7 +360,7 @@
                         <p class="card-text">Assistant Professor<br>Dept. of Electronics Engg., ZHCET</p>
                       </div>
                     </div>
-                  </div><!-- /.col-lg-4 -->
+                  </div>/.col-lg-4
 
                   <div class="col-lg-3">
                     <div class="card" style="width: 18rem;">
@@ -293,7 +369,7 @@
                         <p class="card-text">Assistant Professor<br>Dept. of Electrical Engg., ZHCET</p>
                       </div>
                     </div>
-                  </div><!-- /.col-lg-4 -->
+                  </div>/.col-lg-4
 
                   <div class="col-lg-3">
                     <div class="card" style="width: 18rem;">
@@ -302,7 +378,7 @@
                         <p class="card-text">Assistant Professor<br>Dept. of Mechanical Engg., ZHCET</p>
                       </div>
                     </div>
-                  </div><!-- /.col-lg-4 -->
+                  </div> /.col-lg-4
                 </div>
               </div>
             </div>
@@ -409,12 +485,13 @@
               <div class="accordion-body">
                 <div class="row">
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem; background-color: #090a05;">
                       <div class="card-header">
                         Payload (PL) Team
                       </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Ms. Ilma Shah</li>
+                      <ul class="list-group list-group-flush" style="background-color: black; color: white;">
+                        <li class="list-group-item" style="background-color: black; color: white;"></li>>Ms. Ilma Shah
+                        </li>
                         <li class="list-group-item">Mr. Ahsan Waseem</li>
                         <li class="list-group-item">Mr. Mohd Azhan</li>
                         <li class="list-group-item">Ms. Tanu Attri</li>
@@ -424,7 +501,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem; background-color: #090a05;">
                       <div class="card-header">
                         Electrical Power System (EPS) Team
                       </div>
@@ -440,7 +517,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem; background-color: #090a05;">
                       <div class="card-header">
                         Attitude Determination and Control System (ADCS) Team
                       </div>
@@ -455,7 +532,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem; background-color: #090a05;">
                       <div class="card-header">
                         Communication Systems (COM) & Ground Station Team
                       </div>
@@ -468,7 +545,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem; background-color: #090a05;">
                       <div class="card-header">
                         Embedded Systems Team
                       </div>
@@ -481,7 +558,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem; background-color: #090a05;">
                       <div class="card-header">
                         Public Relations and Outreach Team
                       </div>
@@ -512,70 +589,70 @@
                 <div class="row">
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card cardexpert" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Ranajay Mallik</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Alok Mittal</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Atul Bhargav</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Punit Jain</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Ms. Hemlata Pandey</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Salil Jain</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Kamaldeep</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Prashant Pandey</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Manoj Kumar</h5>
                       </div>
                     </div>
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; background-color: black; color: white;">
                       <div class="card-header">Mr. Karan Jagdale</h5>
                       </div>
                     </div>
@@ -599,7 +676,7 @@
                 <div class="row">
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Mohammad Saif</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -609,7 +686,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Shaheedul Hasan</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -619,7 +696,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Sarfraz Khan</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -629,7 +706,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Cordova Publications</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -639,7 +716,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Shuja Mirza</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -649,7 +726,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Nabeel Ahmad Zia</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -659,7 +736,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Abdul Moiez</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -669,7 +746,7 @@
                   </div><!-- /.col-lg-4 -->
 
                   <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                       <div class="card-header">Mr. Kamran Nabi</h5>
                       </div>
                       <ul class="list-group list-group-flush">
@@ -927,7 +1004,8 @@
 
             <div class="col-md-3" style="text-align:center;"><a aria-label="Chat on WhatsApp"
                 href="https://wa.me/919027041190"> <img alt="Chat on WhatsApp"
-                  src="./img/WhatsAppButtonGreenSmall.png" /></div>
+                  src="./img/WhatsAppButtonGreenSmall.png" />
+            </div>
           </div>
 
         </div>
@@ -941,12 +1019,21 @@
     <footer class="container">
       <p class="float-end"><a href="#">Back to top</a></p>
       <p>&copy; AMU RoboClub &middot; <a href="https://amu.ac.in">Official AMU Website</a> &middot; <a
-          href="https://amuroboclub.in">Official AMU RoboClub Website</a> &middot;</p>
+          href="https://amuroboclub.tech">Official AMU RoboClub Website</a> &middot;</p>
       <a href="https://hits.seeyoufarm.com"><img
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Famu-sat.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=statuspage.svg&icon_color=%23E7E7E7&title=Visitor+Count&edge_flat=false" /></a>
     </footer>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+
+      var typed = new Typed('#element', {
+        strings: ['In rememberance of Sir Syed Ahmad Khan', "AMU'S First Satellite Mission"],
+        typeSpeed: 48,
+      });
+    </script>
 </body>
 
 </html>

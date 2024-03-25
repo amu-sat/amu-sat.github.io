@@ -883,6 +883,69 @@ section {
   color: #47b2e4;
 }
 
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.icon-boxs {
+  box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all ease-in-out 0.4s;
+  background: #f3f5fa;
+}
+
+.icon-boxs .icon {
+  margin-bottom: 10px;
+}
+
+.icon-boxs .icon i {
+  color: #47b2e4;
+  font-size: 36px;
+  transition: 0.3s;
+}
+
+.icon-boxs h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.icon-boxs h4 a {
+  color: #37517e;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-boxs p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.icon-boxs:hover {
+  transform: translateY(-8px);
+}
+
+.icon-boxs:hover h4 a {
+  color: #47b2e4;
+}
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/

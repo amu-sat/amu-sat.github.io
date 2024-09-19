@@ -1,998 +1,1269 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <meta name="description" content="">
-  <meta name="author" content="Faraz Ahmad">
-  <meta name="generator" content="Hugo 0.101.0">
-  <title>SS AMU SAT - The First Nanosat of AMU</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <script type="module" src="js/data.js"></script>
-  <script type="module" src="js/main.js" defer></script>
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/popper.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <title>SS AMU SAT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+  <!-- Favicons -->
+  <link href="assets/img/sat logo.jpeg" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    .b-example-divider {
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    body{margin-top:20px;}
-.timeline-steps {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap
-}
-
-.timeline-steps .timeline-step {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 1rem
-}
-
-@media (min-width:768px) {
-    .timeline-steps .timeline-step:not(:last-child):after {
-        content: "";
-        display: block;
-        border-top: .25rem dotted #3b82f6;
-        width: 3.46rem;
-        position: absolute;
-        left: 7.5rem;
-        top: .3125rem
-    }
-    .timeline-steps .timeline-step:not(:first-child):before {
-        content: "";
-        display: block;
-        border-top: .25rem dotted #3b82f6;
-        width: 3.8125rem;
-        position: absolute;
-        right: 7.5rem;
-        top: .3125rem
-    }
-}
-
-.timeline-steps .timeline-content {
-    width: 10rem;
-    text-align: center
-}
-
-.timeline-steps .timeline-content .inner-circle {
-    border-radius: 1.5rem;
-    height: 1rem;
-    width: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3b82f6
-}
-
-.timeline-steps .timeline-content .inner-circle:before {
-    content: "";
-    background-color: #3b82f6;
-    display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    min-width: 3rem;
-    border-radius: 6.25rem;
-    opacity: .5
-}
-  </style>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/timeline.css" rel="stylesheet">
 
 
 </head>
 
 <body>
-  <main>
-    <div class="row fixed-top" style="position: sticky;padding: 10px; background-color: #ffffff;">
-      <div class="col-md-1" align="center" verticle-align="middle">
-        <img src="./img/logo.jpeg" class="img-fluid" alt="..." style="height:100px; width:100px;">
-      </div>
-      <div class="col-md">
-        <h1 class="display-4"><b>SS AMU SAT</b></h1>
-        <h5>A Students' Satellite Initiative</h5>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto"><img src="assets/img/sat logo.jpeg" alt=""
+          class="img-fluid rounded-circle">
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#skills">Progress</a></li>
+          <li><a class="nav-link scrollto" href="#services">Features</a></li>
+          <li><a class="nav-link scrollto" href="#cta">Funding</a></li>
+          <li><a class="nav-link scrollto" href="#inventory">Inventory</a></li>
+          <li><a class="nav-link scrollto"
+              href="https://milaap.org/fundraisers/support-ss-amu-sat-the-first-satellite-of-aligarh-muslim-university?utm_medium=whatsapp_status_message&utm_source=app">Contribute</a>
+          </li>
+          <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#internship">Internship</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up" data-aos-delay="200">
+          <h1>SS AMU SAT</h1>
+          <h2>Built by the students of Aligarh Muslim University</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+            <a href="https://www.youtube.com/watch?v=uMFd6A7RES8" class="glightbox btn-watch-video"><i
+                class="bi bi-play-circle"></i><span>Watch Introductory Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="animation-2-unscreen.gif" class="img-fluid animated" alt="">
+        </div>
       </div>
     </div>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner" style="background-color: #4290f5;">
-        <div class="carousel-item active">
-          <img src="./img/bg1.jpg" class="img-fluid" alt="..." style="height:600px; width:100%;">
+  </section>
+  <!-- End Hero -->
 
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <!-- <div class="row mx-auto" data-aos="zoom-in"> -->
+        <div class="d-flex justify-content-center" data-aos="zoom-in">
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <d-flex class="flex-column">
+              <p>Sponsored by</p>
+              <img src="assets/img/clients/ingsol.png" class="img-fluid" alt="">
+            </d-flex>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <d-flex class="flex-column">
+              <p>Supported by</p>
+              <img src="assets/img/inspacelogo.jpg" class="img-fluid" alt="">
+            </d-flex>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <d-flex class="flex-column">
+              <p>Under</p>
+              <img src="assets/img/roboclublogo.jpg" class="img-fluid" alt="">
+            </d-flex>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <d-flex class="flex-column">
+              <p>Sponsored by</p>
+              <img src="assets/img/clients/ee.png" class="img-fluid" alt="">
+            </d-flex>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Cliens Section -->
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p style="text-align: justify;">
+              The SS AMU SAT project is an initiative by the Students and Alumni of Zakir Husain College of Engineering
+              and Technology to develop and launch the First Satellite of the Aligarh Muslim University. The project was
+              concieved in 2021, at the AMU RoboClub.
+            </p>
+            <p style="text-align: justify;">
+              Finally, in the early week of December, 2021, this project kick-started after everal rounds of
+              discussions. It is pertinent to mention that there has also been an observation of the NAAC committee,
+              that visited in December 2021, to innovate in the area of Aerial Technology; and thus, the timing of this
+              project could never have been more suited.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p style="text-align: justify;">
+              In the weeks to come, the team grew from a handful to a dozen, to design the following subsystems -
+              Electrical Power System, Payload, Attitude Determination and Control System and Communication Systems.
+              Experts from ISRO and people with prior experience in satellite design have been helping to make this
+              project a success, and eventually commissioning in the Lower Earth Orbit (LEO).
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Payload Team</li>
+              <li><i class="ri-check-double-line"></i> Electrical Team</li>
+              <li><i class="ri-check-double-line"></i> Altitude Determination and Control System</li>
+            </ul>
+            <a href="assets/pdfs/Brochure'24.pdf" target="_blank" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Us Section -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Time line Section ======= -->
+    <section id="timeline" class="why-us section-bg">
+      <div class="container-fluid">
+        <div class="content" style="text-align: center;">
+          <h2>
+            Evolution
+          </h2>
+          <p>We’re very proud of the path we’ve taken. Explore the history that made us we are today.</p>
+        </div>
+
+
+
+        <div>
           <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>This is <b>BIG!</b></h1>
-              <p style="text-align: justify;">The <b>SS AMU SAT</b> project shall be the first satellite of the Aligarh
-                Muslim University to be stationed in the Lower Earth Orbit (LEO).
+
+
+            <div class="row">
+              <div class="col">
+                <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                  <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                      title="" data-content="." data-original-title="November, 2021">
+                      <div class="inner-circle"></div>
+                      <p class="h6 mt-3 mb-1">2021</p>
+                      <p class="h6 text-muted mb-0 mb-lg-0">Project Initiated</p>
+                    </div>
+                  </div>
+                  <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                      title="" data-content="." data-original-title="January, 2023">
+                      <div class="inner-circle"></div>
+                      <p class="h6 mt-3 mb-1">January, 2023</p>
+                      <p class="h6 text-muted mb-0 mb-lg-0">Applied to INSPACE</p>
+                    </div>
+                  </div>
+                  <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                      title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-original-title="2005">
+                      <div class="inner-circle"></div>
+                      <p class="h6 mt-3 mb-1">October, 2023</p>
+                      <p class="h6 text-muted mb-0 mb-lg-0">Approval Accorded</p>
+                    </div>
+                  </div>
+                  <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                      title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-original-title="2010">
+                      <div class="inner-circle"></div>
+                      <p class="h6 mt-3 mb-1">December, 2023</p>
+                      <p class="h6 text-muted mb-0 mb-lg-0">MOU Signed with INSPACE</p>
+                    </div>
+                  </div>
+                  <div class="timeline-step mb-0">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                      title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-original-title="2020">
+                      <div class="inner-circle"></div>
+                      <p class="h6 mt-3 mb-1">August, 2024</p>
+                      <p class="h6 text-muted mb-0 mb-lg-0">Launch! (expected date)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </section>
+    <!-- ======= End TImeline Section ======= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Internship Section ======= -->
+    <!-- <section id="internship" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Summer Internship Program 2024 in SS AMU SAT PROJECT✨</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p style="text-align: justify;">
+              Internship in SS AMU SAT for duration of 4 weeks to allow young academic talent to be associated with the
+              SS AMU SAT project for mutual benefit.
+            </p>
+            <p style="text-align: justify;">
+              The interns shall have an opportunity to know about the space technology on the development of 3U
+              Nanosatellite.
+            </p>
+            <p style="text-align: justify;">
+              Bonafide University students are eligible with some conditions.
+            </p>
+            <p style="text-align: justify;">
+              Apply by 19th May 2024
+            </p>
+            <a href="assets/img/photo1715705975.jpeg" target="_blank" class="btn-learn-more">Download Broucher</a>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <div class="" style="text-align: center;">
+              <div>
+                <img src="assets/img/photo1715705975.jpeg" alt="" height="400">
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- ======= End internship Section ======= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3>The objectives of <strong>SS AMU SAT</strong></h3>
+              <p style="text-align: justify;">
+                The SS AMU SAT aims to foster space technology education while developing a novel image compression
+                technique for faster multimedia transmission and studying the correlation between economic growth and
+                nighttime illumination using satellite imagery and computer vision.
+
+              </p>
+
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>
+                    Vision <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      The vision of SS AMU SAT is to raise awareness and educate the students in the field of Space
+                      Technology and create an ecosystem for Satellite Development.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>
+                    Primary Objective <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      The primary objective of this is to demonstrate a Novel Image Compression Technique to establish a
+                      faster multimedia transmission.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
+                    Economic Growth <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Additionally, the project aims to study the effect of economic growth on the night time
+                      illumination using Satellite Imagery and computer vision. It is proposed to compare the acquired
+                      data with the existing economic data available on public domain and any deviation will be studied.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>04</span>
+                    Inhouse capabilities <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Furthermore, this project shall also serve as a platform to test the in-house built components
+                      such as - ADCS Bus, Payload Bus, EPS Bus and the 3U Satellite Bus.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+
+
+          <!-- Acheivemtn is here -->
+
+
+          <!-- <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3><strong>Acheivements</strong> so far <i>(since Nov. 2021)</i> </h3>
+              <p style="text-align: justify;">
+                The SS AMU SAT aims to foster space technology education while developing a novel image compression
+                technique for faster multimedia transmission and studying the correlation between economic growth and
+                nighttime illumination using satellite imagery and computer vision.
+
+              </p>
+
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>
+                    Engagement <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      • Over 40 students in the current team <br>
+                      • 5 faculties <br>
+                      • Over 10 alumni associated with the project <br>
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>
+                    Exposure <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      • Introduction to Space Technology and mainstream satellite technology in AMU <br>
+                      • Close collaboration with Senior ISRO Scientists and Former Project Directors <br>
+                      • Knowledge Transfer from Industries like STMicroelectronics and E&E Solutions <br>
+                      • Interaction with Space-Tech Giants like Dhruva Space. <br>
+                      • Impact on College Rankings and Accreditation <br>
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
+                    Training <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      • Over six student members received paid internship in US/ Canada <br>
+                      • 1920 man-hours of paid internship and 2160 man-hours of unpaid internship
+                      by STMicroelectronics <br>
+                      • Hands-on training on sub-system development <br>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>04</span>
+                    Job Opportunities<i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      • First placement into Space Tech industry from AMU was from this group. <br>
+                      • Over 5 students received job offers from other reputed companies. <br>
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div> -->
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" data-aos="zoom-in" data-aos-delay="150"
+            style="margin-top: 100px;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9fXqyireh5Q?si=fyepSSNH47s6Tk92"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            &nbsp;
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Why Us Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/skills.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+            <h3>Progress of the project</h3>
+            <p class="fst-italic">
+              The progress of various teams have been displayed here for further details please click on the learn more
+              button below.
+            </p>
+
+            <div class="skills-content">
+
+              <div class="progress">
+                <span class="skill">Payload <i class="val">40%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Electrical <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">ADCS <i class="val">40%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Communication <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <a href="https://silver-diadem-a53.notion.site/Project-Updates-930767cf1b3644e49deca0ea3805553c"
+                class="btn-learn-more">Learn More</a>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-boxs">
+              <h4>Electrical Power System</h4>
+              <p>
+                •POWER BUDGET FINALIZED <br>
+                •LAYOUT OF EPS MODULES FINALIZED <br>
+                •PCB’s OF VARIOUS MODULES FABRICATED <br>
+                •LAYOUT OF MOTHER BOARD UNDER PROGRESS. <br>
+                •SOFTWARE DEVELOPMENT UNDER PROGRESS <br>
+                •PROCUREMENT <br>
+                •SOLAR CELLS FOR TESTING <br>
+                •BATTERIES FOR CHARACTERIZATION & TESTING <br>
+                •MISC. ACCESSORIES <br>
+                •REVISION OF MB UNDER PROGRESS <br>
               </p>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-item" align="left">
-          <img src="./img/ssak.png" class="img-fluid" alt="..." style="height:600px;">
+          <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-boxs">
 
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Named after the <b>Founder</b></h1>
-              <p>In rememberance of <b>Sir Syed Ahmad Khan</b>, the project is named as <b>SS AMU SAT</b></p>
+              <h4>Payload System</h4>
+              <p>
+                •LAYOUT OF PAYLOAD CARD FINALIZED AND PUT UP FOR PRINTING <br>
+                •SOFTWARE DEVELOPMENT UNDER PROGRESS <br>
+                •TESTING OF PARTIAL CODES HAS BEGUN <br>
+                •PROCUREMENT <br>
+                •LENS <br>
+                •RASPBERRY PI (UNDER PROCESS) <br>
+              </p>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-item" align="center">
-          <img src="./img/flag.png" class="img-fluid" alt="..." style="height:600px;">
-
-
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>Dedicated to the <b>Nation</b></h1>
-              <p>AMU has been an institution of National Importance. This project shall be another aid in India's
-                Development.</p>
+          <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-5" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-boxs">
+              <h4>Embedded System</h4>
+              <p>
+                •FINALIZATION OF PROTOCOLS, SENSORS AND INTERFACING OF SENSORS COMPLETED <br>
+                •SOFTWARE DEVELOPMENT OF ADCS UNDER PROGRESS <br>
+                •ALGORITHMS UNDER FINALIZATION <br>
+                •PROCUREMENT <br>
+                •STM DEVELOPMENT BOARDS <br>
+                •STM GPS/GNSS AND OTHER SENSORS <br>
+              </p>
             </div>
           </div>
+
         </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-boxs">
+              <h4>ADCS</h4>
+              <p>
+                •CHASSIS RE-DESIGN COMPLETED <br>
+                •THERMAL AND MECHANICAL SIMULATIONS REMAINING <br>
+                •HARD INTERLOCKS (KILL SWITCH, RBF) TO BE IMPLEMENTED <br>
+                •TEST RIG CONSTRUCTION COMPLETED <br>
+                •TESTING OF OPEN LOOP ORIENTATION CONTROL COMPLETED <br>
+                •ALGORITHMS UNDER FINALIZATION <br>
+                •PROCUREMENT <br>
+                •MOTOR AND ENCODER <br>
+                •FABRICATION TOOLS <br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-boxs">
+
+              <h4>Communication System</h4>
+              <p>
+                •LINK BUDGET COMPLETED AND UNDER REVIEW <br>
+                •QUOTATIONS FROM VENDORS AWAITED <br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-4 d-flex align-items-stretch mt-5" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-boxs">
+              <h4>Ground Station</h4>
+              <p>
+                •DATA ACQUISITION FROM NOAA SATELLITES <br>
+                •DATA SEGMENTATION UNDER PROGRESS <br>
+                •GUI CONSTRUCTION AND DATABASE INTEGRATION UNDER PROGRESS <br>
+                •FABRICATION OF ANTENNA TRACKER UNDER PROGRESS <br>
+                •PROCUREMENT <br>
+                •SOFTWARE DEFINED RADIO <br>
+                •RAW MATERIAL FOR TRACKER FABRICATION <br>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </section>
+    <!-- End Skills Section -->
 
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
 
-    <div class="container marketing">
-      <div class="container-fluid py-5" style="background-color: #ffffff;">
-        <h1>About</h1>
-        <blockquote class="blockquote">
-          <p style="text-align: justify;">The <b>SS AMU SAT</b> project is an initiative by the Students and Alumni of
-            Zakir Husain College of Engineering and Technology to develop and launch the First Satellite of the Aligarh Muslim University. The project was concieved in 2021, at the <strong>AMU RoboClub</strong>.<br>
-            <br>
-           The team is working to indigenously develop the following subsystems:</p>
-          <li>Electrical Power System</li>
-          <li>Payload</li>
-          <li>Attitude Determination and Control System</li>
-          <li>Communication Systems</li>
-          <li>Ground Station</li><br>
-          </blockquote>
-
-        <div class="container">                      
-    <div class="row text-center justify-content-center mb-5">
-        <div class="col-xl-6 col-lg-8">
-            <h2 class="font-weight-bold">Evolution</h2>
-            <p class="text-muted">We’re very proud of the path we’ve taken. Explore the history that made us we are today.</p>
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>The nameplate of our spacecraft.</p>
+          <p>Small | Light | Beautiful</p>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col">
-            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                <div class="timeline-step">
-                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="." data-original-title="November, 2021">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">2021</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Project Initiated</p>
-                    </div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="." data-original-title="January, 2023">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">January, 2023</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Applied to INSPACE</p>
-                    </div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">October, 2023</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Approval Accorded</p>
-                    </div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">December, 2024</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">MOU Signed with INSPACE</p>
-                    </div>
-                </div>
-                <div class="timeline-step mb-0">
-                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">June, 2024</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Launch! (expected date)</p>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4>Physical Dimensions?</h4>
+              <p>The satellite project is named SS AMU SAT, and it is a 3U CubeSat with dimensions of 300mm x 100mm x
+                100mm and a weight of approximately 3500 grams.</p>
             </div>
-        </div>
-    </div>
-</div>
+          </div>
 
-        <hr class="featurette-divider">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+            data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4>Orbit?</h4>
+              <p>The satellite is in a circular polar orbit in Low Earth Orbit (LEO) and is powered by both solar panels
+                and batteries.</p>
+            </div>
+          </div>
 
-        <h1>Objective</h1>
-        <blockquote class="blockquote">
-          <p style="text-align: justify;">
-            <li>The vision of SS AMU SAT is to raise awareness and educate the students in the field of Space Technology and create an ecosystem for Satellite Development.</li>
-            <li>The primary objective of this is to demonstrate a Novel Image Compression Technique to establish a faster
-            multimedia transmission.</li>
-            <li>Additionally, the project aims to study the effect of economic growth on the night time illumination using
-            Satellite Imagery and computer vision. It is proposed to compare the acquired data with the
-            existing economic data available on public domain and any deviation will be studied.</li>
-            <li>Furthermore, this project shall also serve as a platform to test the in-house built components
-            such as - ADCS Bus, Payload Bus, EPS Bus and the 3U Satellite Bus.</li>
-          </p>
-        </blockquote>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/uMFd6A7RES8"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+            data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4>Stabalization?</h4>
+              <p>Attitude correction of the satellite is available using Magneto-torquers and Reaction Wheels, and it
+                carries an on-board camera as its payload.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+            data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4>Communication?</h4>
+              <p>The satellite uses a communication system consisting of a beacon, UPLINK, and DOWNLINK on the S-Band,
+                and its chassis material is aluminum.</p>
+            </div>
+          </div>
+
         </div>
+
       </div>
-      <!-- 
-          <div class="embed-responsive embed-responsive-16by9 w-50 p-3">
-               <iframe class="embed-responsive-item" src="./img/LOGOANIME.mp4" allowfullscreen></iframe>
-          </div>
-          -->
+    </section>
+    <!-- End Services Section -->
 
-      <hr class="featurette-divider">
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="accordion" id="accordionExample">
-
-          <!--Faculty Team-->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                Faculty Team
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Prof. Sufyan Beg</h5>
-                        <p class="card-text">Principal<br>Zakir Husain College of Engg. & Technology</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Prof. Ekram Khan</h5>
-                        <p class="card-text">Chairman<br>Dept. of Electronics Engg., ZHCET<br><b>Project In-charge</b>
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Prof. Saleem Anwar Khan</h5>
-                        <p class="card-text">Professor<br>Dept. of Mechanical Engg., ZHCET</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Mohammad Sharique</h5>
-                        <p class="card-text">Assistant Professor<br>Dept. of Electronics Engg., ZHCET</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Adil Sarwar</h5>
-                        <p class="card-text">Assistant Professor<br>Dept. of Electrical Engg., ZHCET</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Azhar Jameel</h5>
-                        <p class="card-text">Assistant Professor<br>Dept. of Mechanical Engg., ZHCET</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-                </div>
+        <div class="row">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h3>Funding</h3>
+            <div class="funding-bar mt-4 mb-4">
+              <div class="progress">
+                <div class="progress-bar bg-blue-subtle" role="progressbar" style="width: 11.4%" aria-valuenow="11.4"
+                  aria-valuemin="0" aria-valuemax="100">11.4%</div>
               </div>
+              <p class="text-end">7,41,000 out of 65,00,000</p>
             </div>
-          </div>
+            <p style="text-align: justify;">
+              Respected Visitor,
+              Thank You for your interest, and we appreciate the time that you have taken to go through our website. The
+              estimated expenditure for the design, fabrication, assembly, testing, validation, space qualification,
+              launch and commissioning of SS AMU SAT falls in the tune of nearly INR 45.0 Lakhs (including estimated
+              launch cost). So far, the students have managed to run this project with their own contributions. We have
+              obtained the estimate through the FAQ published by the 75 Student Satellite Programme initiated by the
+              ITCA. However, the members have been trying to manufacture the components in-house so as to bring down the
+              overall cost.
+              Considering the total requirement, it is evident that the small pool of students' contribution will not be
+              sufficient to launch our project into Space. In view of this, generous contribution is requested from all
+              to help us realise this project.
+              The bank account details for donations shall be updated very soon on the website.
+            </p>
+            <p>
+              <a class="cta-btn align-middle"
+                href="https://milaap.org/fundraisers/support-ss-amu-sat-the-first-satellite-of-aligarh-muslim-university?utm_medium=whatsapp_status_message&utm_source=app">Contribute</a>
 
-          <!-- Alumni Team-->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Alumni Team
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Mr. Raunaque Qaiser</h5>
-                        <p class="card-text">Gr. Manager<br>ST Microelectronics</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Nazeer Ahmad</h5>
-                        <p class="card-text">Scientist<br>ISRO</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Dr. Abdullah Amir Hayat</h5>
-                        <p class="card-text">Post-Doc Fellow<br>SUTD, Singapore</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Mr. Faraz Ahmad</h5>
-                        <p class="card-text">Dy. Manager<br>NHDC Limited<br><b>Project Mentor</b></p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Mr. Ishrat Jamal</h5>
-                        <p class="card-text">Scientist<br>ISRO</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Mr. Ghulam Sarwar</h5>
-                        <p class="card-text">Scientist<br>ISRO</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Mr. Mohammad Talha</h5>
-                        <p class="card-text">Engineer<br>NXP</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title">Mr. Monis Khan</h5>
-                        <p class="card-text">Scientist<br>ISRO</p>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Student Team-->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Student's Team
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        Payload (PL) Team
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Ms. Ilma Shah</li>
-                        <li class="list-group-item">Mr. Ahsan Waseem</li>
-                        <li class="list-group-item">Mr. Mohd Azhan</li>
-                        <li class="list-group-item">Ms. Tanu Attri</li>
-
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        Electrical Power System (EPS) Team
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Mr. Kanuj Chitranshu</li>
-                        <li class="list-group-item">Ms. Poorti Varshney</li>
-                        <li class="list-group-item">Ms. Munira Sultan</li>
-                        <li class="list-group-item">Ms. Atifa Saeed</li>
-
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        Attitude Determination and Control System (ADCS) Team
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Mr. Mohammad Suhaib, B.Sc. (Phy.)</li>
-                        <li class="list-group-item">Mr. Mohammad Afzal</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        Communication Systems (COM) & Ground Station Team
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Ms. Tahreem Zaidi, M.Tech. (Comm.)</li>
-                        <li class="list-group-item">Ms. Tarannum Zafar Ansari</li>
-                        <li class="list-group-item">Mr. Azhan Kamil</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        Embedded Systems Team
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Ms. Kulsum Iliyas</li>
-                        <li class="list-group-item">Mr. Anant Agrawal</li>
-                        <li class="list-group-item">Mr. Tarun Singh</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">
-                        Public Relations and Outreach Team
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Ms. Mansha Kazmi</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experts-->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Experts
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row">
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Ranajay Mallik</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Alok Mittal</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Atul Bhargav</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Punit Jain</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Ms. Hemlata Pandey</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Salil Jain</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Kamaldeep</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Prashant Pandey</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Manoj Kumar</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Karan Jagdale</h5>
-                      </div>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sponsors-->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Sponsors
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row">
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Mohammad Saif</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Business Head,<br> Big Basket, Mumbai</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Shaheedul Hasan</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">C.O.O.,<br> KP Group, Surat</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Sarfraz Khan</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Senior Integration Architect<br>Macquarie Group, Australia</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Cordova Publications</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">India</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Shuja Mirza</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Alumni</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Nabeel Ahmad Zia</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Alumni</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Abdul Moiez</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Australia</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-                  <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-header">Mr. Kamran Nabi</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Alumni</li>
-                      </ul>
-                    </div>
-                  </div><!-- /.col-lg-4 -->
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div><!-- /.row -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <!-- START THE FEATURETTES -->
-
-        <!-- Brochure -->
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Features. <span class="text-muted">The nameplate of our
-                spacecraft.</span></h2>
-            <p class="lead">Small | Light | Beautiful</p><br>
-            <div class="col-md-7">
-
-            </div>
-          </div>
-          <div class="col-md-5">
-            <table class="table">
-              <tr>
-                <td>Name</td>
-                <td>SS AMU SAT</td>
-              </tr>
-              <tr>
-                <td>CubeSat Size</td>
-                <td>3U</td>
-              </tr>
-              <tr>
-                <td>Dimensions</td>
-                <td>300mm X 100mm X 100mm</td>
-              </tr>
-              <tr>
-                <td>Weight</td>
-                <td>~3500 gm</td>
-              </tr>
-              <tr>
-                <td>Type of Orbit</td>
-                <td>Circular Polar Orbit in LEO</td>
-              </tr>
-              <tr>
-                <td>Power</td>
-                <td>Solar and Battery powered</td>
-              </tr>
-              <tr>
-                <td>Attitude Correction</td>
-                <td>Available with Magneto-torquers and Reaction Wheels</td>
-              </tr>
-              <tr>
-                <td>Payload</td>
-                <td>On-board Camera</td>
-              </tr>
-              <tr>
-                <td>Communication System</td>
-                <td>Beacon, UPLINK and DOWNLINK on S-Band</td>
-              </tr>
-              <tr>
-                <td>Chassis Material</td>
-                <td>Aluminum</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-        <!-- Progress -->
-        <div class="row featurette">
-          <div class="col-md-12 order-md-2">
-            <!-- <h2 class="featurette-heading fw-normal lh-1">Progress <br><span class="text-muted">We are nearly there,
-                have a look!</span></h2> -->
-            <iframe src="https://v2-embednotion.com/Project-Update-930767cf1b3644e49deca0ea3805553c?pvs=4"></iframe>  <style>  iframe { width: 100%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none; }  </style>
-          </div>
-          <!-- <div class="col-md-4 order-md-1">
-        <img src="./img/chassis.png" class="img-fluid" alt="..." style="height:350px; width: 100%;">
-      </div> 
-          <div class="col-md-3 order-md-1" style="height:500px; overflow-x:hidden; overflow-y:auto;">
-            <a class="twitter-timeline" href="https://twitter.com/amu_sat?ref_src=twsrc%5Etfw">Updates by amu_sat</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>-->
-        </div>
-
-        <hr class="featurette-divider">
-        <!-- Orbit -->
-        <div class="row featurette">
-          <div class="col-md-5">
-            <h2 class="featurette-heading fw-normal lh-1">Orbit. <span class="text-muted">The final destination!</span>
-            </h2>
-            <p class="lead">Polar | Lower Earth Orbit</p>
-          </div>
-          <div class="col-md-7">
-            <table class="table">
-              <tr>
-                <td>Semi Major Axis </td>
-                <td>6884.75 m </td>
-              </tr>
-              <tr>
-                <td>Eccentricity </td>
-                <td>0 </td>
-              </tr>
-              <tr>
-                <td>Inclination </td>
-                <td>97 deg </td>
-              </tr>
-              <tr>
-                <td>Argument of Perigee </td>
-                <td>0 deg </td>
-              </tr>
-              <tr>
-                <td>RAAN </td>
-                <td>284.457 deg </td>
-              </tr>
-              <tr>
-                <td>True Anomaly </td>
-                <td>0 deg </td>
-              </tr>
-              <tr>
-                <td>Orbit Altitude </td>
-                <td>506.75 km </td>
-              </tr>
-              <tr>
-                <td>Orbital Velocity </td>
-                <td>7.60887 km/s </td>
-              </tr>
-              <tr>
-                <td>Orbital Period </td>
-                <td>1hr 34min 45sec (94.75 min) </td>
-              </tr>
-              <tr>
-                <td>Ground Track Repetition </td>
-                <td>15.48 times in 24 hrs </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- Simulation -->
-        <div class="row featurette">
-          <div class="col-md-5 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">We are not there yet! <span class="text-muted">But we know how
-                it will look.</span></h2>
-            <p class="lead">A simulation of the spacecraft in the orbit.
+              <a href="bankinfo.html" class="glightbox cta-btn"><span>Bank Information</span></a>
             </p>
           </div>
-          <div class="col-md-7 order-md-1">
-            <iframe width="100%" height="500" src="https://www.youtube.com/embed/9fXqyireh5Q?start=5"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+          <div class="col-lg-4 cta-btn-container">
+            <img src="assets/img/photo1710921445.jpeg" alt="" style="width: auto; height: 500px;">
+            <!-- <a class="cta-btn align-middle" href="https://milaap.org/fundraisers/support-ss-amu-sat-the-first-satellite-of-aligarh-muslim-university?utm_medium=whatsapp_status_message&utm_source=app">Contribute</a> -->
           </div>
         </div>
 
-        <hr class="featurette-divider">
-        <!-- /END THE FEATURETTES -->
+      </div>
+    </section>
+    <!-- End Cta Section -->
 
-        <div class="jumbotron">
-          <h1 class="display-4">Fundings</h1>
-          <p class="lead" style="text-align: justify;">Respected Visitor,<br>Thank You for your interest, and we
-            appreciate the time that you have taken to go through our website. The estimated expenditure for the design,
-            fabrication, assembly, testing, validation, space qualification, launch and commissioning of SS AMU SAT
-            falls in the tune of nearly INR 45.0 Lakhs (including estimated launch cost). So far, the students have
-            managed to run this project with their own contributions. We have obtained the estimate through the <a
-              href="https://75satellites.org/assets/75Satellites-FAQ.pdf" target=”_blank”>FAQ</a> published by the 75
-            Student Satellite Programme initiated by the <a href="https://75satellites.org" target=”_blank”>ITCA</a>.
-            However, the members have been trying to manufacture the components in-house so as to bring down the overall
-            cost. <br> Considering the total requirement, it is evident that the small pool of students' contribution
-            will not be sufficient to launch our project into Space. In view of this, generous contribution is requested
-            from all to help us realise this project. <br> The bank account details for donations shall be updated very
-            soon on the website.</p>
-          <hr class="my-4">
-          <p style="text-align:justify;">Monetory contributions are welcome and we would also appreciate your kind
-            efforts to procure the intended items. <a
-              href="https://drive.google.com/file/d/1Pw9yG0JOMKh1sUHhOMyVj8c4920brgum/view?usp=share_link"
-              target=”_blank”>The brochure is available here</a>. The list of components that we are intending to buy is
-            available with the <b>Project Incharge</b> (<a
-              href="https://www.amu.ac.in/faculty/electronics-engineering/ekram-khan" target=”_blank”>Prof. Ekram
-              Khan</a> | ekhan.el@amu.ac.in) and <b>Project Mentor</b> (<a
-              href="https://in.linkedin.com/in/iamfarazahmad" target=”_blank”>Mr. Faraz Ahmad</a> |
-            imfarazahmad@gmail.com). Alternatively, for our dearest contributers who wish to make monetory donations, we
-            shall provide the account details upon request.<br> The interested contributers may e-mail their contact
-            informations to the Project In-charge or Project Mentor as mentioned below. The list of required components
-            and equipment shall be notified along with the link to online stores.<br>
-          </p><br>
-          <h2 class="display-6" style="text-align: center;">
-            List of Contributors
-          </h2><br>
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Mr. Mohammad Saif</h5>
-                  <p class="card-text">Business Head<br>BigBasket, Mumbai</p>
-                </div>
-              </div>
-            </div><!-- /.col-lg-4 -->
 
-            <div class="col-lg-3">
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Mr. Shaheedul Hasan</h5>
-                  <p class="card-text">C.O.O.<br>KP Group, Surat</p>
-                </div>
-              </div>
-            </div><!-- /.col-lg-4 -->
 
-            <div class="col-lg-3">
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Mr. Sarfraz Khan</h5>
-                  <p class="card-text">Senior Integration Architect<br>Macquarie Group, Australia</p>
-                </div>
-              </div>
-            </div><!-- /.col-lg-4 -->
 
+    <!-- ======= Inventory Section ======= -->
+    <section id="inventory">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <iframe src="https://v2-embednotion.com/612465f924854715b1dda54aa1146abe"
+            style="width: 100%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none;"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- End inventory Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Images from various events during the display of the project.</p>
+        </div>
+
+        <!-- <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul> -->
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270262.jpeg" class="img-fluid" alt="">
+            </div>
+            <!-- <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
           </div>
-          <h1 class="display-6" style="text-align: center;">
-            We sincerely Thank You for your time and generousity!
-          </h1><br>
-          <div class="row" align="center">
-            <div class="col-md-4" style="text-align:center;"><a class="btn btn-primary btn-lg"
-                href="mailto:ekhan.el@amu.ac.in" role="button">Contact Project In-Charge</a></div>
-            <div class="col-md-4" style="text-align:center;"><a class="btn btn-primary btn-lg"
-                href="mailto:imfarazahmad@gmail.com" role="button">Contact Project Mentor</a></div>
 
-            <div class="col-md-3" style="text-align:center;"><a aria-label="Chat on WhatsApp"
-                href="https://wa.me/919027041190"> <img alt="Chat on WhatsApp"
-                  src="./img/WhatsAppButtonGreenSmall.png" /></div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270262 (2).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270262 (3).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270262 (5).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web"> -->
+          <!-- <div class="portfolio-img"><img src="assets/img/portfolio/tt2.jpg" class="img-fluid" alt=""></div> -->
+          <!-- <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          <!-- </div> -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270262 (4).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270265 (3).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270265 (2).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/photo1706270262 (4).jpeg" class="img-fluid"
+                alt=""></div>
+            <!-- <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div> -->
           </div>
 
         </div>
 
       </div>
+    </section>
+    <!-- End Portfolio Section -->
 
-    </div><!-- /.container -->
-    <hr class="featurette-divider">
+    <!-- ======= Team Section ======= -->
 
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p>&copy; AMU RoboClub &middot; <a href="https://amu.ac.in">Official AMU Website</a> &middot; <a
-          href="https://amuroboclub.in">Official AMU RoboClub Website</a> &middot;</p>
+
+
+
+
+
+
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>A cohesive team is essential for project success, pooling diverse skills and perspectives to tackle
+            challenges effectively. Collaboration within a team fosters innovation, enabling members to generate
+            creative solutions and overcome obstacles. Effective communication and synergy among team members enhance
+            productivity, ensuring project goals are met efficiently.</p>
+        </div>
+        <h2>Faculty Team</h2>
+        <div class="row">
+
+
+
+
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/sbeg.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Prof. Sufiyan Beg</h4>
+                <span>Principal, </span>
+                <p>Zakir Husain College of Engg. & Technology</p>
+                <!-- <p>Voulenteer</p> -->
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/ekram.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Prof. Ekram Khan</h4>
+                <span>Chairman and Project Incharge</span>
+                <p>Dept. of Electronics Engg., ZHCET</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/salem.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Prof. Saleem Anwar Khan</h4>
+                <span>Professor</span>
+                <p>Dept. of Mechanical Engg., ZHCET</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/shar.jpg" class="img-fluid"
+                  style="border-radius: 100%; height: 150px; width: auto;" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Mohammad Sharique</h4>
+                <span>Assistant Professor</span>
+                <p>Dept. of Electronics Engg., ZHCET</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/adilnew.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Adil Sarwar</h4>
+                <span>Assistant Professor</span>
+                <p>Dept. of Electrical Engg., ZHCET</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/faraz.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Mr. Faraz Ahmad</h4>
+                <span>Project Mentor</span>
+                <p>Dy. Manager, NHDC Limited</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <h2 style="margin-top: 30px;">
+          <a href="https://silver-diadem-a53.notion.site/56a593fb38da46e2967f678e0d44ba21?v=8dd9ef3a7365400da4eff0e7671f52a0&pvs=4"
+            style="text-decoration: none;">
+
+            Student Team
+          </a>
+        </h2>
+        <div class="row">
+          <iframe src="https://v2-embednotion.com/56a593fb38da46e2967f678e0d44ba21"
+            style="width: 100%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none;"></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHANGE TILL HERE -->
+
+
+
+
+
+
+    <!-- End Team Section -->
+
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>We are not there yet, but we will be there soon. Here are the most looked up questions about the project.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                data-bs-target="#faq-list-1">WHY? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  • State of the Art Technology implementation <br>
+                  • Recognition to Aligarh and to the University <br>
+                  • Increased Employment Opportunities <br>
+                  • Exposure to the Students and Faculty <br>
+                  • Skill Development <br>
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+                class="collapsed">WHAT ARE THE VARIOUS DEADLINES?<i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  • Two Months Post PDR for Completion and Engineering Model <br>
+                  • Two Months for Testing <br>
+                  • Two Months for optimization and Space ready Model <br>
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+                class="collapsed">WHAT ARE THE SOURCES OF FUNDING?<i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  • Industrial Sponsorship <br>
+                  • Crowd Funding <br>
+                  • Self-Support by the Team Members <br>
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
+                class="collapsed">WHO ALL ARE SUPPORTING THIS INITIATIVE? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  • INSPACE and ISRO in official capacity. Technical Support from Alumni, Industrial Experts.
+                </p>
+              </div>
+            </li>
+
+            <!-- <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
+                class="collapsed">What is the right ascension of the ascending node (RAAN) for the satellite's orbit? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The right ascension of the ascending node (RAAN) for the satellite's orbit is 284.457 degrees.
+                </p>
+              </div>
+            </li> -->
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>SS AMU SAT</h3>
+            <p>
+              Robo Club <br>
+              Department of Mechnical Engineering <br>
+              Aligarh Muslim University<br>
+              Aligarh, 202001<br><br>
+              <a href="https://www.amu.ac.in/miscellaneous/amu-roboclub/home-page" style="text-decoration: none;">Visit
+                Us</a>
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3 id="contact">Contact Details:</h3>
+            <p>
+            <p><b> Prof Ekram </b></p>
+            <p>Project Incharge</p>
+            <strong>Phone:</strong> +91 94571 10112<br>
+            <strong>Email:</strong> ekhan.el@amu.ac.in<br>
+            </p>
+            <p>
+            <p><b>Mr. Faraz Ahmad</b></p>
+            <strong>Phone:</strong> +91 90270 41190<br>
+            <strong>Email:</strong> farazinovator@gmail.com<br>
+            </p>
+          </div>
+
+
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/amu_sat?lang=en" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+              <a href="
+              https://www.instagram.com/ss_amu_sat" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+              <a href="
+              https://www.linkedin.com/company/ssamu-sat" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright" style="margin-right: 100px;">
+        &copy; Copyright <strong><span>SS AMU SAT</span></strong>. All Rights Reserved
+      </div>
       <a href="https://hits.seeyoufarm.com"><img
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Famu-sat.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=statuspage.svg&icon_color=%23E7E7E7&title=Visitor+Count&edge_flat=false" /></a>
-    </footer>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/SS AMU SAT-free-bootstrap-html-template-corporate/ -->
+        Build by <a href="https://github.com/shibli2316/">Shibli</a> and Tusharika
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
-    <script src="../js/bootstrap.bundle.min.js"></script>
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
